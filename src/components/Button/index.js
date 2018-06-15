@@ -19,8 +19,7 @@ export default class Button extends Component {
 }
 
 Button.propTypes = {
-  children: PropTypes.isRequired,
-  color: PropTypes.string
+  children: PropTypes.isRequired
 }
 
 Button.defaultProps = {

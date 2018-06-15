@@ -73,9 +73,6 @@
     "redux-thunk": "^2.3.0"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "src/**/*.js": ["eslint --fix", "git add"]
   }
 }

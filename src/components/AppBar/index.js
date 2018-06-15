@@ -25,5 +25,5 @@ export default class AppBar extends Component {
 }
 
 AppBar.propTypes = {
-  children: PropTypes.children
+  children: PropTypes.node
 }

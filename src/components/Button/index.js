@@ -19,6 +19,7 @@ export default class Button extends Component {
 }
 
 Button.propTypes = {
+  children: PropTypes.node
 }
 
 Button.defaultProps = {

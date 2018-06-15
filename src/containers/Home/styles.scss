@@ -1,0 +1,160 @@
+:local(.styles) {
+
+  a {
+    color: $grey35;
+    font-weight: bold;
+  }
+
+  .logo {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+    margin: 20px auto;
+  }
+
+  .command {
+    background-color: $grey35;
+    display: inline-block;
+    padding: 1em;
+    color: $white;
+    font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
+    text-align: left;
+  }
+
+  .section {
+    margin-bottom: 40px;
+    clear: both;
+
+    h2 {
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      &:before,
+      &:after {
+        display: block;
+        content: "";
+        flex-grow: 1;
+        height: 2.4px;
+        height: .10rem;
+        background-color: $gold;
+        border-style: solid;
+        border-width: 0;
+      }
+
+      &:before {
+        margin-right: 10px;
+      }
+
+      &:after {
+        margin-left: 10px;
+      }
+    }
+
+  }
+
+  #banner {
+    background: $darkGrey;
+    text-align: center;
+    padding: 30px 20px;
+    color: $white;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+
+    p {
+      color: $grey;
+      &.description {
+        font-size: 1.4em;
+      }
+    }
+
+    #install {
+      overflow: hidden;
+
+      #msg {
+        margin-right: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        display: inline-block;
+      }
+    }
+
+  }
+
+  #getting-started {
+    background: $gold;
+    color: $white;
+    background: $darkGrey;
+
+    h2 {
+      background: $gold;
+      border-bottom: 1px solid $white;
+
+      &:before,
+      &:after {
+        height: 0;
+      }
+    }
+
+    ul {
+      padding: 20px;
+
+      li {
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .command {
+        display: block;
+      }
+    }
+
+  }
+
+  #features {
+    li {
+      width: 50%;
+      float: left;
+      margin-bottom: 35px;
+    }
+  }
+
+  #contribute {
+    .btn {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 900px) {
+
+    .section {
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    #features {
+      li {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+}

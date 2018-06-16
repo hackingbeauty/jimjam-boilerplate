@@ -6,8 +6,8 @@ import {
 } from '@material-ui/core/styles'
 
 /* containers */
-import Home   from 'containers/Home'
 import AppBar from 'components/AppBar'
+import Home   from 'containers/Home'
 
 // global styles for entire app
 import './styles.scss'
@@ -22,7 +22,7 @@ export default class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <div>
-          <AppBar />
+          <AppBar>Test123</AppBar>
           <Home />
         </div>
       </MuiThemeProvider>

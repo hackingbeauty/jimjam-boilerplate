@@ -20,7 +20,7 @@ process.env.BABEL_ENV = TARGET
 const common = {
   entry: [
     'babel-polyfill',
-    './src/index'
+    path.resolve(PATHS.app, 'index.js')
   ],
 
   output: {
@@ -32,8 +32,8 @@ const common = {
     extensions: ['.jsx', '.js', '.json', '.scss'], /* Enables devs to leave off extension when importing */
     modules: ['node_modules', PATHS.app], /* Tell Wepback what directories to search when resolving modules */
     alias: {
-      assets: path.resolve(__dirname, '../src/app/assets'),
-      core: path.resolve(__dirname, '../src/app/core')
+      assets: path.resolve(__dirname, '../src/assets'),
+      core: path.resolve(__dirname, '../src/core')
     }
   },
 

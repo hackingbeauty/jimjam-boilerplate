@@ -10,7 +10,7 @@
     "build:production": "npm run clean && npm run build",
     "lint": "eslint src",
     "precommit": "lint-staged",
-    "start": "cross-env NODE_ENV=development node bin/server.js",
+    "start": "cross-env NODE_ENV=development node bin/launch-server.js",
     "test": "bin/test.sh"
   },
   "repository": {

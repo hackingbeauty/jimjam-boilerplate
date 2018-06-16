@@ -2,6 +2,7 @@
   "name": "jimjam",
   "version": "2.0.0",
   "main":"src/index.js",
+  "license": "MIT",
   "description": "A React/Redux Progressive Mobile Web App boilerplate",
   "scripts": {
     "clean": "rimraf dist",

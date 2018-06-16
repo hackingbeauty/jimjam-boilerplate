@@ -1,25 +1,24 @@
-import React, { Component }    from 'react';
+import React                   from 'react'
 import { Button as MuiButton } from '@material-ui/core'
 import PropTypes               from 'prop-types'
 
 /* component styles */
-import { styles } from './styles.scss';
+import { styles } from './styles.scss'
 
-export default class Button extends Component {
-  render() {
-    const { color, children } = this.props
-    return (
-      <div className={styles}>
-        <MuiButton variant="contained" color={color}>
-          {children}
-        </MuiButton>
-      </div>
-    )
-  }
+const Button = (props) => {
+  const { color, children } = props
+  return (
+    <div className={styles}>
+      <MuiButton variant="contained" color={color}>
+        {children}
+      </MuiButton>
+    </div>
+  )
 }
 
 Button.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node.isRequired,
+  color: PropTypes.string
 }
 
 Button.defaultProps = {

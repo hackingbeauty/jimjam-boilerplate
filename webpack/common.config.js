@@ -1,21 +1,21 @@
-const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const autoprefixer = require('autoprefixer');
+const path = require('path')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const autoprefixer = require('autoprefixer')
 
-const development = require('./dev.config.js');
-const production = require('./prod.config.js');
+const development = require('./dev.config.js')
+const production = require('./prod.config.js')
 
-require('babel-polyfill');
+require('babel-polyfill')
 
-const TARGET = process.env.npm_lifecycle_event;
+const TARGET = process.env.npm_lifecycle_event
 
 const PATHS = {
   app: path.join(__dirname, '../src'),
   build: path.join(__dirname, '../dist')
-};
+}
 
-process.env.BABEL_ENV = TARGET;
+process.env.BABEL_ENV = TARGET
 
 const common = {
   entry: [
@@ -29,8 +29,12 @@ const common = {
   },
 
   resolve: {
-    extensions: ['.jsx', '.js', '.json', '.scss'],
-    modules: ['node_modules', PATHS.app]
+    extensions: ['.jsx', '.js', '.json', '.scss'], /* Enables devs to leave off extension when importing */
+    modules: ['node_modules', PATHS.app], /* Tell Wepback what directories to search when resolving modules */
+    alias: {
+      assets: path.resolve(__dirname, '../src/app/assets'),
+      core: path.resolve(__dirname, '../src/app/core')
+    }
   },
 
   module: {
@@ -58,12 +62,12 @@ const common = {
     })
   ]
 
-};
+}
 
 if (TARGET === 'start' || !TARGET) {
-  module.exports = merge(development, common);
+  module.exports = merge(development, common)
 }
 
 if (TARGET === 'build' || !TARGET) {
-  module.exports = merge(production, common);
+  module.exports = merge(production, common)
 }

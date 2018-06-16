@@ -4,7 +4,7 @@ const initialState = {
   leftNavOpen: false
 }
 
-export default function uiReducer(state = initialState, action) {
+function uiReducer(state = initialState, action) {
   switch (action.type) {
     case constants.OPEN_NAV:
       return Object.assign({}, state, {
@@ -20,3 +20,5 @@ export default function uiReducer(state = initialState, action) {
       return state
   }
 }
+
+export default uiReducer

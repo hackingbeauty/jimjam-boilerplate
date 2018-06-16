@@ -24,3 +24,5 @@ Button.propTypes = {
 Button.defaultProps = {
   color: 'primary'
 }
+
+export default Button

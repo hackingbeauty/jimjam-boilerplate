@@ -17,15 +17,17 @@ const theme = createMuiTheme()
 injectTapEventPlugin()
 
 // eslint-disable-line react/prefer-stateless-function
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
         <div>
-          <AppBar>Test123</AppBar>
+          <AppBar>Your React App</AppBar>
           <Home />
         </div>
       </MuiThemeProvider>
     )
   }
 }
+
+export default App

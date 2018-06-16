@@ -25,3 +25,5 @@ const AppBar = (props) => {
 AppBar.propTypes = {
   children: PropTypes.node.isRequired
 }
+
+export default AppBar

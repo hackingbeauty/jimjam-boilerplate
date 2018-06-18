@@ -1,13 +1,14 @@
 import constants from 'core/types'
 
-export function openNav() {
+export function openModal(obj) {
   return {
-    type: constants.OPEN_NAV
+    type: constants.OPEN_MODAL,
+    modalKey: obj.modalKey
   }
 }
 
-export function closeNav() {
+export function closeModal() {
   return {
-    type: constants.CLOSE_NAV
+    type: constants.CLOSE_MODAL
   }
 }

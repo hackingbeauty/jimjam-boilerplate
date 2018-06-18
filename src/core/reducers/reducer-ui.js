@@ -1,22 +1,32 @@
 import constants from 'core/types'
 
 const initialState = {
-  leftNavOpen: false
+  modalState: {
+    openModal: false,
+    modalKey: ''
+  }
 }
 
-export default function uiReducer(state = initialState, action) {
+export function uiReducer(state = initialState, action) {
   switch (action.type) {
-    case constants.OPEN_NAV:
-      return Object.assign({}, state, {
-        leftNavOpen: true
-      })
 
-    case constants.CLOSE_NAV:
-      return Object.assign({}, state, {
-        leftNavOpen: false
-      })
+  case constants.OPEN_MODAL:
+    return Object.assign({}, state, {
+      modalState: {
+        openModal: true,
+        modalKey: action.modalKey
+      }
+    })
 
-    default:
-      return state
+  case constants.CLOSE_MODAL:
+    return Object.assign({}, state, {
+      modalState: {
+        openModal: false,
+        modalKey: ''
+      }
+    })
+
+  default:
+    return state
   }
 }

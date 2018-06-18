@@ -1,20 +1,3 @@
 :local(.styles) {
 
-  .app-bar {
-    background: $darkGrey !important;
-
-    h1 {
-      text-transform: uppercase;
-      font-family: "Open Sans", sans-serif;
-      text-shadow: 2px 2px 0 #000;
-      font-weight: bold !important;
-    }
-  }
-
-  @media (max-width: 650px) {
-    h1 {
-      visibility: hidden;
-    }
-  }
-
 }

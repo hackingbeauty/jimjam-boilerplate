@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
+const appConfig = require('configs/config-main')
+
 
 module.exports = {
   mode: 'production',
@@ -55,10 +57,10 @@ module.exports = {
     }),
 
     new WebpackPwaManifest({
-      name: 'Your app name',
-      short_name: 'YourAppName',
-      description: 'Description of your app',
-      background_color: '#ffffff'
+      name: appConfig.name,
+      short_name: appConfig.shortName,
+      description: appConfig.description,
+      background_color: appConfig.splashScreenBackground
     }),
     new CopyWebpackPlugin([
       {

@@ -3,19 +3,20 @@ export function getStyles(key) {
   const variables = require('sass-extract-loader?{"plugins":["sass-extract-js"]}!../../configs/config-styles.scss')
 
   if (key instanceof Array) {
-    const stylesArr = []
+    const returnObj = {}
 
     for (let i = 0; i < key.length; i += 1) {
       const styleKey = key[i]
 
-      if (variables[styleKey] && variables[styleKey].declarations.length) {
-        const style = variables[styleKey].declarations[0].expression
 
-        stylesArr.push(style)
+      if (variables[styleKey]) {
+        const style = variables[styleKey]
+
+        returnObj[styleKey] = style
       }
     }
 
-    return stylesArr
+    return returnObj
   } else if ((typeof key === 'string') && variables[key]) {
     return variables[key]
   }

@@ -1,19 +1,12 @@
-import React, { Component }  from 'react'
-import {
-  MuiThemeProvider,
-  createMuiTheme
-} from '@material-ui/core/styles'
-
-/* containers */
-import AppBar from 'components/AppBar'
-import Home   from 'containers/Home'
+import React, { Component }   from 'react'
+import {  MuiThemeProvider  } from '@material-ui/core/styles'
+import theme                  from 'configs/config-theme'
+import AppBar                 from 'components/AppBar'
+import Home                   from 'containers/Home'
 
 // global styles for entire app
 import './styles.scss'
 
-const theme = createMuiTheme()
-
-// eslint-disable-line react/prefer-stateless-function
 class App extends Component {
   render() {
     return (

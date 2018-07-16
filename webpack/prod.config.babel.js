@@ -1,11 +1,10 @@
-const webpack = require('webpack')
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const WebpackPwaManifest = require('webpack-pwa-manifest')
-const appConfig = require('configs/config-main')
-
+import webpack              from 'webpack'
+import path                 from 'path'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import HtmlWebpackPlugin    from 'html-webpack-plugin'
+import CopyWebpackPlugin    from 'copy-webpack-plugin'
+import WebpackPwaManifest   from 'webpack-pwa-manifest'
+import { appConfig }        from '../src/configs/config-main'
 
 module.exports = {
   mode: 'production',

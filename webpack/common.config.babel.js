@@ -1,10 +1,9 @@
-const path = require('path')
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const autoprefixer = require('autoprefixer')
-
-const development = require('./dev.config.js')
-const production = require('./prod.config.js')
+import webpack      from 'webpack'
+import path         from 'path'
+import merge        from 'webpack-merge'
+import autoprefixer from 'autoprefixer'
+import development  from './dev.config.babel'
+import production   from './prod.config.babel'
 
 require('babel-polyfill')
 

@@ -1,6 +1,6 @@
-const webpack = require('webpack')
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+import webpack           from 'webpack'
+import path              from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 module.exports = {
   mode: 'development',

@@ -6,7 +6,7 @@
   "description": "A React/Redux Progressive Mobile Web App boilerplate",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "webpack --progress --verbose --colors --display-error-details --config webpack/common.config.js",
+    "build": "webpack --progress --verbose --colors --display-error-details --config webpack/common.config.babel.js",
     "build:production": "npm run clean && npm run build",
     "lint": "eslint src",
     "precommit": "lint-staged",

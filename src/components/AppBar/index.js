@@ -11,7 +11,11 @@ const AppBar = (props) => {
   const { children } = props
   return (
     <div className={styles}>
-      <MuiAppBar position="static">
+      <MuiAppBar
+        position="static"
+        className="app-bar"
+        color="secondary"
+      >
         <Toolbar>
           <Typography variant="title" color="inherit">
             {children}

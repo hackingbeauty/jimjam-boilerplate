@@ -1,0 +1,7 @@
+:local(.styles) {
+  color: $black;
+
+  @media (min-width: 900px) {
+    width: 400px;
+  }
+}

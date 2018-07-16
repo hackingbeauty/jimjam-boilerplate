@@ -1,5 +1,4 @@
 import React, { Component }  from 'react'
-import injectTapEventPlugin  from 'react-tap-event-plugin'
 import {
   MuiThemeProvider,
   createMuiTheme
@@ -13,8 +12,6 @@ import Home   from 'containers/Home'
 import './styles.scss'
 
 const theme = createMuiTheme()
-
-injectTapEventPlugin()
 
 // eslint-disable-line react/prefer-stateless-function
 class App extends Component {

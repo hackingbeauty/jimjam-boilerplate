@@ -21,7 +21,7 @@ class StandardModal extends Component {
   static getDerivedStateFromProps(nextProps) {
     const { modalKey, modalState } = nextProps
 
-    if (modalKey === modalState.modalKey) {
+    if (modalState && (modalKey === modalState.modalKey)) {
       return { open: modalState.openModal }
     }
 

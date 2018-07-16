@@ -20,10 +20,10 @@ class ConfirmationModal extends Component {
   }
 
   static getDerivedStateFromProps(nextProps) {
-    const { modalKey, modalState } = nextProps
+    const { modalKey, confirmModalState } = nextProps
 
-    if (modalKey === modalState.modalKey) {
-      return { open: modalState.openModal }
+    if (confirmModalState && (modalKey === confirmModalState.modalKey)) {
+      return { open: confirmModalState.openModal }
     }
 
     return { open: false }
@@ -31,13 +31,13 @@ class ConfirmationModal extends Component {
 
   handleCancel = () => {
     const { actions, modalKey } = this.props
-    actions.ui.closeModal({ modalKey })
+    actions.ui.closeConfirmModal({ modalKey })
   }
 
   handleOk = () => {
     const { actions, modalKey, okCallback } = this.props
     if (okCallback) { okCallback() }
-    actions.ui.closeModal({ modalKey })
+    actions.ui.closeConfirmModal({ modalKey })
   }
 
   render() {
@@ -45,7 +45,7 @@ class ConfirmationModal extends Component {
       children,
       okCallback,
       modalKey,
-      modalState,
+      confirmModalState,
       title,
       ...other
     } = this.props
@@ -107,7 +107,7 @@ ConfirmationModal.propTypes = {
   children: PropTypes.node,
   okCallback: PropTypes.func,
   modalKey: PropTypes.string.isRequired,
-  modalState: PropTypes.shape({}).isRequired,
+  confirmModalState: PropTypes.shape({}).isRequired,
   title: PropTypes.string
 }
 

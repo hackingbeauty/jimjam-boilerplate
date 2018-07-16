@@ -1,9 +1,7 @@
-/* global styles */
-
 @import './styles/third-party/normalize';
+@import '../../configs/config-styles';
 @import './styles/typography';
 @import './styles/links';
-@import './styles/variables';
 
 :global(body) {
 

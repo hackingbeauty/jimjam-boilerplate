@@ -22,12 +22,15 @@ module.exports = {
             loader: 'css-loader'
           },
           {
+            loader: 'resolve-url-loader'
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              data: '@import "variables";',
+              data: '@import "config-styles";',
               includePaths: [
-                path.join(__dirname, '..', '/src/containers/App/styles')
+                path.join(__dirname, '..', '/src/configs')
               ]
             }
           }
@@ -44,8 +47,6 @@ module.exports = {
       __DEVELOPMENT__: false
     }),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
@@ -54,9 +55,9 @@ module.exports = {
     }),
 
     new WebpackPwaManifest({
-      name: 'JimJam Boilerplate',
-      short_name: 'JimJamBoilerplate',
-      description: 'A superior UI foundation for React Apps',
+      name: 'Your app name',
+      short_name: 'YourAppName',
+      description: 'Description of your app',
       background_color: '#ffffff'
     }),
     new CopyWebpackPlugin([

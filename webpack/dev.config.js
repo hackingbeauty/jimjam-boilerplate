@@ -24,13 +24,14 @@ module.exports = {
             localIdentName: '[hash:base64:5][path]-[local]'
           }
         },
+        { loader: 'resolve-url-loader' },
         {
           loader: 'sass-loader',
           options: {
             sourceMap: true,
-            data: '@import "variables";',
+            data: '@import "config-styles";',
             includePaths: [
-              path.join(__dirname, '..', '/src/containers/App/styles')
+              path.join(__dirname, '..', '/src/configs')
             ]
           }
         }

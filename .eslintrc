@@ -24,7 +24,7 @@
       }
     }
   },
-  "rules": {
+  "rules": { // 0=off, 1=warn, 2=error. Defaults to 0.
     semi: [2, "never"],
     "no-multi-spaces": [2, {
       "exceptions": {
@@ -45,6 +45,10 @@
       js: 'never',
       jsx: 'never',
     }],
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "react/no-unused-prop-types": [2, {
+      skipShapeProps: false
+    }],
+    "import/prefer-default-export": "off"
   }
 }

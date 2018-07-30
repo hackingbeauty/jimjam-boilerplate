@@ -1,9 +1,5 @@
 {
   "name": "jimjam",
-  "version": "2.0.0",
-  "private": true,
-  "license": "MIT",
-  "description": "An Advanced Foundational UI Boilerplate For React/Redux Apps",
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack --progress --verbose --colors --display-error-details --config webpack/common.config.babel.js",
@@ -12,10 +8,6 @@
     "precommit": "lint-staged",
     "start": "cross-env NODE_ENV=development node bin/launch-server.js",
     "test": "bin/test.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hackingbeauty/base-single-page-app-architecture.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",

@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "license": "MIT",
-  "description": "A React/Redux Progressive Mobile Web App boilerplate",
+  "description": "An Advanced Foundational UI Boilerplate For React/Redux Apps",
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack --progress --verbose --colors --display-error-details --config webpack/common.config.babel.js",

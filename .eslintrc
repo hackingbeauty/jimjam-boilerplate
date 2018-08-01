@@ -1,6 +1,5 @@
 {
   "extends": "airbnb",
-
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
@@ -45,7 +44,7 @@
       js: 'never',
       jsx: 'never',
     }],
-    "react/prefer-stateless-function": "off",
+    "react/prefer-stateless-function": 0,
     "react/no-unused-prop-types": [2, {
       skipShapeProps: false
     }],

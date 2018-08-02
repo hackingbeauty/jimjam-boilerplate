@@ -1,4 +1,3 @@
-import webpack              from 'webpack'
 import path                 from 'path'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import HtmlWebpackPlugin    from 'html-webpack-plugin'
@@ -37,12 +36,6 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      },
-      __DEVELOPMENT__: false
-    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
@@ -50,7 +43,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-
     new WebpackPwaManifest({
       name: appConfig.name,
       short_name: appConfig.shortName,

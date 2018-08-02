@@ -12,7 +12,7 @@ app.use(require('morgan')('short'));
   const compiler = webpack(webpackConfig)
 
   app.use(require('webpack-dev-middleware')(compiler, {
-    noInfo: true, publicPath: webpackConfig.output.publicPath
+    noInfo: true
   }))
 
   app.use(require('webpack-hot-middleware')(compiler, {

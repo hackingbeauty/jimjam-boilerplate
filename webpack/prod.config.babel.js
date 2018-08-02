@@ -8,6 +8,8 @@ import { appConfig }        from '../src/configs/config-main'
 module.exports = {
   mode: 'production',
 
+  stats: 'errors-only',
+
   module: {
     rules: [
       {

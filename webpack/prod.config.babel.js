@@ -9,10 +9,6 @@ import { appConfig }        from '../src/configs/config-main'
 module.exports = {
   mode: 'production',
 
-  output: {
-    publicPath: ''
-  },
-
   module: {
     rules: [
       {

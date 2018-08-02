@@ -21,11 +21,6 @@ const common = {
     path.resolve(PATHS.app, 'index.js')
   ],
 
-  output: {
-    path: PATHS.build,
-    filename: 'bundle.js'
-  },
-
   resolve: {
     extensions: ['.jsx', '.js', '.json', '.scss'], /* Enables devs to leave off extension when importing */
     modules: ['node_modules', PATHS.app] /* Tell Wepback what directories to search when resolving modules */

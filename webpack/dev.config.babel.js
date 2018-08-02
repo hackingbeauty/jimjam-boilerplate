@@ -8,9 +8,6 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client'
   ],
-  output: {
-    publicPath: ''
-  },
 
   module: {
     rules: [{

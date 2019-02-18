@@ -3,10 +3,5 @@
   "plugins": [
     ["transform-class-properties"],
     ["transform-object-rest-spread"]
-  ],
-  "env": {
-    "start": {
-      "presets": ["react-hmre"]
-    }
-  }
+  ]
 }
